@@ -11,7 +11,9 @@ function TopNavbar() {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-lg">
+
+    <nav className="navbar navbar-expand-lg custom-navbar shadow-lg animate__animated animate__fadeInDown">
+
       <div className="container-fluid">
         {/* Left side: Logo ("Velnor" text as logo) */}
         <Link className="navbar-brand logo" to="/">

@@ -1,6 +1,6 @@
 // src/components/SignIn.js
 import React, { useState } from 'react';
-import './SignIn.css'; // CSS specific to SignIn
+import './SignIn.css'; // Use your desired CSS theme (light or black/red)
 
 function SignIn() {
   const [email, setEmail] = useState('');
@@ -8,7 +8,6 @@ function SignIn() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle SignIn logic
     console.log('Sign In:', email, password);
   };
 
@@ -21,8 +20,8 @@ function SignIn() {
             <label htmlFor="email" className="form-label">Email Address</label>
             <input
               type="email"
-              className="form-control"
               id="email"
+              className="form-control"
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -34,8 +33,8 @@ function SignIn() {
             <label htmlFor="password" className="form-label">Password</label>
             <input
               type="password"
-              className="form-control"
               id="password"
+              className="form-control"
               placeholder="Enter your password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -48,7 +47,7 @@ function SignIn() {
 
         <div className="footer">
           <p>Don't have an account? <a href="/signup">Sign Up</a></p>
-          <p><a href="/forgot-password">Forgot Password?</a></p> {/* Forgot Password Link */}
+          <p><a href="/forgot-password">Forgot Password?</a></p>
         </div>
       </div>
     </div>
