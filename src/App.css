@@ -1,18 +1,47 @@
-body{
-    background-color: #000;
-}
-
 html, body {
-    height: 100%;
     margin: 0;
     padding: 0;
-    overflow-y: auto; /* Enable vertical scroll */
-    scroll-behavior: smooth;
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+    font-family: sans-serif;
   }
   
-  body::after {
-    content: '';
-    display: block;
-    height: 100px; /* Add space to force scroll */
+  body {
+    background-color: #000;
+    color: #f00;
   }
-  
+  @media (min-width: 1400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+      /* max-width: 1320px; */
+    }
+  }
+  @media (min-width: 1200px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+      /* max-width: 1140px; */
+    }
+  }
+  @media (min-width: 992px) {
+    .container, .container-lg, .container-md, .container-sm {
+      /* max-width: 960px; */
+    }
+  }
+  @media (min-width: 768px) {
+    .container, .container-md, .container-sm {
+      /* max-width: 720px; */
+    }
+  }
+  @media (min-width: 576px) {
+    .container, .container-sm {
+      /* max-width: 540px; */
+    }
+  }
+  .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    --bs-gutter-x: 1.5rem !important;
+    --bs-gutter-y: 0 !important;
+    width: 100% !important;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: 0px; 
+  }

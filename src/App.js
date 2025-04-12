@@ -7,18 +7,19 @@ import TopNavbar from './components/TopNavbar';
 import ForgotPassword from './components/ForgotPassword';
 import './App.css';
 import ProductPage from './components/ProductPage';
+import ProductDetailPage from './components/ProductDetailPage';
 
 function App() {
   return (
     <Router>
       <TopNavbar />
-      <div className="container">
+      <div className="containers">
         <Routes>
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/products" element={<ProductPage />} />
-          
+          <Route path="/product/:id" element={<ProductDetailPage />} />
         </Routes>
       </div>
     </Router>
