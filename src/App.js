@@ -1,4 +1,3 @@
-// src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SignIn from './components/SignIn';
@@ -18,6 +17,8 @@ function App() {
       <TopNavbar />
       <div className="containers">
         <Routes>
+          {/* Default route for home page */}
+          <Route path="/" element={<ProductPage />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/contact" element={<Contact />} />
