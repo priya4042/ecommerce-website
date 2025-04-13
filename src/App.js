@@ -8,6 +8,9 @@ import ForgotPassword from './components/ForgotPassword';
 import './App.css';
 import ProductPage from './components/ProductPage';
 import ProductDetailPage from './components/ProductDetailPage';
+import Footer from './components/Footer'; // ✅ make sure this is imported
+import About from './components/About';
+import Contact from './components/Contact';
 
 function App() {
   return (
@@ -17,11 +20,14 @@ function App() {
         <Routes>
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/products" element={<ProductPage />} />
           <Route path="/product/:id" element={<ProductDetailPage />} />
+          <Route path="/about" element={<About />} /> {/* Add the About route */}
         </Routes>
       </div>
+      <Footer /> {/* ✅ Footer is now outside Routes and will always be shown */}
     </Router>
   );
 }

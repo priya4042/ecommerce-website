@@ -1,9 +1,11 @@
+// src/components/ProductPage.jsx
+
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ProductPage.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import HeroSlider from "../components/HeroSlider";
+import HeroSlider from './HeroSlider';
 
 const ProductPage = () => {
   const [products, setProducts] = useState([]);
@@ -26,6 +28,9 @@ const ProductPage = () => {
     <div className="product-page">
       {/* Hero Slider */}
       <HeroSlider />
+
+      {/* Background Image Section */}
+      <div className="background-banner" />
 
       {/* Product Grid */}
       <div className="product-grid">

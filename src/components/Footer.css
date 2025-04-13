@@ -1,0 +1,125 @@
+.footer {
+    /* background-color: #111; */
+    color: #fff;
+    padding: 50px 20px 30px;
+    font-family: 'Segoe UI', sans-serif;
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  .footer-newsletter {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .footer-newsletter h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    margin-right: 104px;
+    
+  }
+  
+  .newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .newsletter-form input {
+    padding: 10px 20px;
+    width: 300px;
+    border: none;
+    border-radius: 30px;
+  }
+  
+  .newsletter-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: red;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .newsletter-form button:hover {
+    background-color: red;
+  }
+  
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    margin-top: 30px;
+    margin-left: 131px;
+  }
+  
+  .footer-column h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    position: relative;
+  }
+  
+  .footer-column h4::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: red;
+    margin-top: 5px;
+  }
+  
+  .footer-column a {
+    display: block;
+    color: #aaa;
+    margin: 8px 0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-column a:hover {
+    color: #fff;
+  }
+  
+  .footer-column p {
+    font-size: 0.9rem;
+    color: #ccc;
+    line-height: 1.6;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+  
+  .social-icons svg {
+    cursor: pointer;
+    color: #aaa;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .social-icons svg:hover {
+    transform: scale(1.2);
+    color: #ff4081;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    color: #777;
+    font-size: 0.85rem;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

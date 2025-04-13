@@ -24,7 +24,6 @@ const ProductDetailPage = () => {
         console.error('Failed to fetch product:', error);
       }
     };
-
     fetchProduct();
   }, [id]);
 
@@ -33,12 +32,11 @@ const ProductDetailPage = () => {
       try {
         const res = await fetch('https://fakestoreapi.com/products');
         const data = await res.json();
-        setRelatedProducts(data.slice(0, 4)); // Get the first 4 products
+        setRelatedProducts(data.slice(0, 4));
       } catch (error) {
         console.error('Failed to fetch related products:', error);
       }
     };
-
     fetchRelatedProducts();
   }, []);
 
@@ -47,39 +45,30 @@ const ProductDetailPage = () => {
   return (
     <div className="product-detail-page" style={{ backgroundColor: bgColor }}>
       <div className="product-detail-container">
-
-        {/* ✅ LEFT SIDE - IMAGE LAYOUT AS REQUESTED */}
+        {/* LEFT IMAGE SECTION */}
         <div className="product-images-layout">
           <div className="large-image-card">
             <img src={product.image} alt="Main view" />
           </div>
-
           <div className="small-image-row">
-            <div className="image-card">
-              <img src={product.image} alt="View 2" />
-            </div>
-            <div className="image-card">
-              <img src={product.image} alt="View 3" />
-            </div>
-          </div>
-
-          <div className="small-image-row">
-            <div className="image-card">
-              <img src={product.image} alt="View 4" />
-            </div>
-            <div className="image-card">
-              <img src={product.image} alt="View 5" />
-            </div>
+            {[...Array(4)].map((_, i) => (
+              <div className="image-card" key={i}>
+                <img src={product.image} alt={`View ${i + 2}`} />
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* ✅ RIGHT SIDE - INFO */}
+        {/* RIGHT INFO SECTION */}
         <div className="product-info">
           <h1>{product.title}</h1>
+          <p className="category">{product.category}</p>
           <div className="price-box">
             <span className="price-original">Rs. {(product.price * 100).toFixed(2)}</span>
             <span className="price-current">Rs. {(product.price * 83).toFixed(2)}</span>
           </div>
+
+          <div className="ratings">★★★★☆ 4.5 (245 reviews)</div>
 
           <div className="size-selector">
             <strong>Size:</strong>
@@ -108,15 +97,14 @@ const ProductDetailPage = () => {
         </div>
       </div>
 
-      {/* ✅ YOU MAY ALSO LIKE SECTION */}
       <div className="you-may-also-like">
         <h2>You May Also Like</h2>
         <div className="related-products">
           {relatedProducts.map((relatedProduct) => (
             <div key={relatedProduct.id} className="related-product">
               <img src={relatedProduct.image} alt={relatedProduct.title} />
-              <p>{relatedProduct.title}</p>
-              <span>Rs. {(relatedProduct.price * 83).toFixed(2)}</span>
+              <p className="related-title">{relatedProduct.title}</p>
+              <span className="related-price">Rs. {(relatedProduct.price * 83).toFixed(2)}</span>
             </div>
           ))}
         </div>

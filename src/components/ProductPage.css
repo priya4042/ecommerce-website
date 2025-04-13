@@ -1,26 +1,63 @@
+/* src/components/ProductPage.css */
 
+.product-page {
+  position: relative;
+  z-index: 1;
+  background: #000;
+  color: white;
+}
 
+/* Fixed Background Banner */
+.background-banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.background-banner::before {
+  content: "";
+  background-image: url('https://iwestreet.com/cdn/shop/files/IMG_8862.jpg?v=1727287089&width=2000');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+/* Product Grid */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 2rem;
-  padding: 2rem 0;
+  padding: 4rem 2rem;
+  z-index: 2;
+  position: relative;
 }
 
+/* Product Card */
 .product-card {
-  background: black; /* Tailwind orange-500 */
+  background: #111;
   border-radius: 20px;
   padding: 20px;
   text-align: center;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(255, 0, 0, 0.15);
   color: white;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(255, 0, 0, 0.3);
 }
 
+/* Image */
 .image-wrapper {
   position: relative;
   margin-bottom: 15px;
@@ -34,17 +71,19 @@
   border-radius: 10px;
 }
 
+/* Badge */
 .badge {
   position: absolute;
   top: 10px;
   right: 10px;
-  background: #dc2626; /* Red */
+  background: #dc2626;
   color: white;
   font-size: 12px;
   padding: 5px 10px;
   border-radius: 5px;
 }
 
+/* Info */
 .product-info h3 {
   font-size: 16px;
   margin-bottom: 10px;
@@ -68,6 +107,7 @@
   margin-left: 10px;
 }
 
+/* Button */
 .view-btn {
   display: inline-block;
   padding: 8px 16px;
@@ -83,3 +123,77 @@
   background: #0f172a;
 }
 
+/* ===================== RESPONSIVE ===================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    padding: 3rem 1rem;
+  }
+
+  .image-wrapper img {
+    height: 200px;
+  }
+
+  .product-info h3 {
+    font-size: 15px;
+  }
+
+  .price {
+    font-size: 15px;
+  }
+
+  .view-btn {
+    font-size: 13px;
+    padding: 7px 14px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 2rem 1rem;
+  }
+
+  .image-wrapper img {
+    height: 170px;
+  }
+
+  .product-info h3 {
+    font-size: 14px;
+  }
+
+  .price {
+    font-size: 14px;
+  }
+
+  .view-btn {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+/* Very Small Screens */
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .image-wrapper img {
+    height: 160px;
+  }
+
+  .product-card {
+    padding: 15px;
+  }
+
+  .view-btn {
+    width: 100%;
+    text-align: center;
+    padding: 8px 0;
+  }
+}
