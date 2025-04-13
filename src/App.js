@@ -7,9 +7,11 @@ import ForgotPassword from './components/ForgotPassword';
 import './App.css';
 import ProductPage from './components/ProductPage';
 import ProductDetailPage from './components/ProductDetailPage';
-import Footer from './components/Footer'; // ✅ make sure this is imported
+import Footer from './components/Footer';
 import About from './components/About';
 import Contact from './components/Contact';
+import AddProducts from './components/AddProducts'; // ✅ ADD THIS
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
@@ -17,18 +19,18 @@ function App() {
       <TopNavbar />
       <div className="containers">
         <Routes>
-          {/* Default route for home page */}
           <Route path="/" element={<ProductPage />} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/forgot-password" element={<ForgotPassword />} />
-          <Route path="/products" element={<ProductPage />} />
-          <Route path="/product/:id" element={<ProductDetailPage />} />
-          <Route path="/about" element={<About />} /> {/* Add the About route */}
+          <Route path="signin" element={<SignIn />} />
+          <Route path="signup" element={<SignUp />} />
+          <Route path="forgot-password" element={<ForgotPassword />} />
+          <Route path="products" element={<ProductPage />} />
+          <Route path="product/:id" element={<ProductDetailPage />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="/add-products" element={<AddProducts />} />
         </Routes>
       </div>
-      <Footer /> {/* ✅ Footer is now outside Routes and will always be shown */}
+      <Footer />
     </Router>
   );
 }

@@ -4,5 +4,6 @@ html, body {
     padding: 0;
     overflow-x: hidden; /* OK */
     overflow-y: auto;   /* Ensure vertical scrolling is allowed */
+    background-color: black;
   }
   

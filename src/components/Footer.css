@@ -1,3 +1,7 @@
+.footer-column{
+  margin-left: 75px;
+}
+
 .footer {
   /* background: linear-gradient(135deg, #2a2a2a, #111); */
   color: #fff;
@@ -19,6 +23,7 @@
   text-transform: uppercase;
   font-weight: bold;
   animation: fadeInUp 1.2s ease-in-out;
+  margin-right: 100px;
 }
 
 .newsletter-form {

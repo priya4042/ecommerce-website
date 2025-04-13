@@ -1,0 +1,173 @@
+/* Global Reset and Base Styling */
+  body {
+    font-family: 'Arial', sans-serif;
+    /* background-color: #1c1c1c; */
+    /* color: #f8f8f8; */
+  }
+  
+  .add-products {
+    /* background-color: #1c1c1c; */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Page Title */
+  .page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #e52b2b; /* Red Text */
+    margin-bottom: 20px;
+  }
+  
+  /* Container for Search Bar and Button */
+  .search-add-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 64%;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar {
+    font-size: 1rem;
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #444;
+    width: 70%;
+    max-width: 500px;
+    background-color: #333;
+    color: #fff;
+    transition: border 0.3s;
+  }
+  
+  .search-bar:focus {
+    outline: none;
+    border-color: #e52b2b; /* Red Border on Focus */
+  }
+  
+  .search-bar::placeholder {
+    color: #aaa;
+  }
+  
+  /* Button Styling */
+  .btn-primary {
+    background-color: #e52b2b; /* Red Background */
+    color: white;
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .btn-primary:hover {
+    background-color: #b61c1c; /* Darker Red on Hover */
+    transform: scale(1.05);
+  }
+  
+  /* Table Styling */
+  .product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .product-table th, .product-table td {
+    padding: 12px 15px;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+    font-size: 1rem;
+  }
+  
+  .product-table th {
+    background-color: #111;
+    font-weight: 600;
+  }
+  
+  .product-table tr:nth-child(even) {
+    background-color: #444;
+  }
+  
+  .product-table tr:hover {
+    background-color: #555;
+    transform: scale(1.02);
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .product-table img {
+    border-radius: 8px;
+  }
+  
+  /* Modal Styling */
+  .modal-content {
+    background-color: #222;
+    color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .modal-header {
+    border-bottom: 1px solid #444;
+  }
+  
+  .modal-title {
+    font-size: 1.8rem;
+    color: #e52b2b; /* Red Color */
+  }
+  
+  .modal-body {
+    padding: 20px;
+  }
+  
+  .modal-body input, .modal-body textarea {
+    color: #fff;
+    border-radius: 8px;
+    padding: 12px;
+    width: 100%;
+    border: 1px solid #555;
+    margin-bottom: 15px;
+  }
+  
+  .modal-body input[type="file"] {
+    padding: 10px;
+  }
+  
+  .modal-footer {
+    border-top: 1px solid #444;
+  }
+  
+  /* Label Styling */
+  label {
+    font-size: 1rem;
+    color: #e52b2b; /* Red Color */
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  /* Input Fields Focus Effect */
+  input[type="text"], input[type="number"], textarea, input[type="file"] {
+    transition: border 0.3s;
+  }
+  
+  input[type="text"]:focus, input[type="number"]:focus, textarea:focus, input[type="file"]:focus {
+    border-color: #e52b2b; /* Red Border on Focus */
+  }
+  
+  /* Animation */
+  .table-row {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .table-row:hover {
+    transform: scale(1.02);
+  }
+  
+  .modal.show {
+    background-color: rgba(0, 0, 0, 0.7);
+    display: block;
+  }
+  
+  

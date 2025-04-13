@@ -56,6 +56,9 @@ function TopNavbar() {
             <li className="nav-item animate__animated animate__fadeIn animate__delay-1s">
               <Link className="nav-link" to="/products">Products</Link>
             </li>
+            <li className="nav-item animate__animated animate__fadeIn animate__delay-1s">
+    <Link className="nav-link" to="/add-products">Add Products</Link> {/* 🔧 Fixed label */}
+  </li>
             <li className="nav-item animate__animated animate__fadeIn animate__delay-2s">
               <Link className="nav-link" to="/about">About</Link>
             </li>
