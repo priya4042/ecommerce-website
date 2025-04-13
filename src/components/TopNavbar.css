@@ -1,32 +1,20 @@
-
 /* === NAVBAR BASE === */
 .custom-navbar {
-  background: linear-gradient(135deg, #000000, #1a1a1a); /* Black gradient */
+  background-color: rgb(208, 25, 27);
   padding: 1rem 3rem;
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid white;
   z-index: 1000;
 }
 
-/* === LOGO STYLE === */
-.logo-text {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: red;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-family: 'Orbitron', sans-serif;
-  transition: all 0.3s ease;
-}
-
-.logo-text:hover {
-  color: #ff4d4d;
-  text-shadow: 0 0 10px red;
-  transform: scale(1.1);
+/* === LOGO IMAGE STYLE === */
+.nav-logo-img {
+  height: 87px;
+  object-fit: contain;
 }
 
 /* === NAV LINKS === */
 .navbar-nav .nav-link {
-  color: red !important;
+  color: white !important;
   font-size: 1.1rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -36,14 +24,14 @@
 }
 
 .navbar-nav .nav-link:hover {
-  color: #ff4d4d !important;
-  text-shadow: 0 0 8px red;
+  color: #f0f0f0 !important;
+  text-shadow: 0 0 8px white;
   transform: translateY(-2px);
 }
 
 /* === BUTTON LINKS (SIGN IN/OUT) === */
 .btn-link {
-  color: red !important;
+  color: white !important;
   font-size: 1.1rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -51,9 +39,42 @@
 }
 
 .btn-link:hover {
-  color: #ff4d4d !important;
-  text-shadow: 0 0 10px red;
+  color: #f0f0f0 !important;
+  text-shadow: 0 0 10px white;
   transform: scale(1.05);
+}
+
+/* === RESPONSIVE NAVBAR COLLAPSE === */
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+    background-color: rgb(208, 25, 27);
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .navbar-nav .nav-link {
+    margin-left: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .navbar-toggler-icon {
+    background-color: white; /* White color for the hamburger icon */
+  }
+
+  .navbar-collapse {
+    background-color: rgb(208, 25, 27); /* Keep same red background on collapse */
+    padding: 1rem 0;
+    border-radius: 10px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1.2rem;
+  }
+}
+
+.navbar-toggler {
+  border: none;
 }
 
 /* === ANIMATIONS (using Animate.css) === */
@@ -64,19 +85,4 @@
 
 .animate__fadeInDown {
   animation-name: fadeInDown;
-}
-
-/* === RESPONSIVE NAVBAR COLLAPSE === */
-@media (max-width: 768px) {
-  .navbar-nav {
-    text-align: center;
-    background-color: #111;
-    padding: 1rem;
-    border-radius: 10px;
-  }
-
-  .navbar-nav .nav-link {
-    margin-left: 0;
-    margin-bottom: 0.5rem;
-  }
 }
