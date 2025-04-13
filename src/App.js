@@ -13,7 +13,7 @@ import Contact from './components/Contact';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/ecommerce-website">
       <TopNavbar />
       <div className="containers">
         <Routes>
